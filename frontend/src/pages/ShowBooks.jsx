@@ -10,7 +10,7 @@ const ShowBooks = () => {
     const {id}=useParams();
     useEffect(()=>{
         setLoading(true);
-        axios.get(`https://book-store-application-51s572bzj-kushal1306s-projects.vercel.app/${id}`)
+        axios.get(`https://book-store-application-blush.vercel.app/${id}`)
         .then((response)=>{
             setBook(response.data);
             setLoading(false);   
