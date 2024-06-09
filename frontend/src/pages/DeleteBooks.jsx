@@ -13,7 +13,7 @@ const DeleteBooks = () => {
     const {enqueueSnackbar}=useSnackbar();
     useEffect(()=>{
         setLoading(true);
-        axios.get(`http://localhost:3000/books/${id}`)
+        axios.get(`https://book-store-application-51s572bzj-kushal1306s-projects.vercel.app/${id}`)
         .then((response)=>{
             setLoading(false);
             setTitle(response.data.title);
@@ -22,7 +22,7 @@ const DeleteBooks = () => {
     },[])
     const handleDeleteBook = () => {
         setLoading(true);
-        axios.delete(`http://localhost:3000/books/${id}`)
+        axios.delete(`https://book-store-application-51s572bzj-kushal1306s-projects.vercel.app/${id}`)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Books Deleted Successfully',{variant:'success'});
